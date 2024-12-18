@@ -1,0 +1,368 @@
+
+
+body {
+	font-family: 'Anton', sans-serif;
+  background-color: #ff503e;
+}
+
+p {
+    color: white;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    /*background: url('/static/img/photo1.jpg')center center no-repeat;*/
+    background-color: #ff503e;
+    background-size: cover;
+    z-index: -10;
+}
+
+.gametitre {
+    color:white;
+    font-size: 6rem;
+    margin-left: 2cm; 
+    margin-top: 0cm;
+}
+
+.form-section {
+  margin-bottom: 20px; 
+}
+
+/* form {
+  max-width: 500px; 
+  margin: 0 auto; 
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgb(255, 255, 255);
+} */
+
+/* select {
+  width: 100%; 
+  padding: 8px;
+  margin-top: 5px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+} */
+
+
+.navigation {
+    position: relative;
+    display: flex;
+    flex-wrap: line;
+    align-items:normal;
+    width: 100%;
+    padding: 30px 0 10px;
+    margin-top:0cm;
+    margin-left: 30cm;
+}
+
+/* .paragraphegame {
+    margin-left: 2.3cm;
+    margin-top: -1.5cm;
+    color : white;
+} */
+
+/* .overlay2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #ff503e;
+    background-size: cover;
+    z-index: -10;
+} */
+
+nav {
+    display: flex;
+    flex-wrap: line;
+    align-items: center;
+    width: 100%;
+    padding: 30px 0 10px;
+}
+
+
+nav ul {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 40px;
+    margin-right: 16.5cm;
+    margin-top: -4cm;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-family: "Give You Glory", sans-serif;
+    color: white;
+    font-size: 2rem;
+    margin-left: 1cm;
+    transition: color .3s;
+}
+
+nav ul li a:hover {
+    color:rgb(176, 33, 33);
+}
+
+/* .text {
+    padding : 70px 0;
+    color: white;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+} */
+
+/* .text h1 {
+    font-size: 75px;
+    line-height: 2;
+    margin-bottom: 1rem;
+} */
+
+.titre {
+    color:white;
+    font-size: 6rem;
+    margin-left: 2cm;  
+}
+
+.soustitre {
+    font-size: 3rem;
+    color: white;
+    margin-bottom: -4cm;
+    margin-left: 2.3cm;
+}
+
+.surtitre {
+    font-size: 3rem;
+    color: black;
+    font-family: "Give You Glory", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: -4cm;
+    margin-left: 12.5cm;
+}
+
+.righttitre {
+    font-size: 1rem;
+    font-family: "Give You Glory", sans-serif;
+    color: white;
+    margin-top:-6.5cm;
+    margin-left:32cm
+
+}
+.text p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+}
+
+.text a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 1.25rem;
+    border: 1px solid rgb(176, 33, 33);
+    color:aqua;
+    padding: 10 px 20 px;
+    margin-right: 30px;
+}
+
+.image {
+    width: auto; 
+    height: 265px; 
+    margin-top: -15cm;
+    margin-left: 36cm;
+}
+
+.image2 {
+    width: auto;
+    height: 300px;
+    margin-top: 3cm;
+    margin-left: -1cm;
+}
+
+.jt {
+  position: relative;
+  font-size: 2vmin;
+  margin-left: 4cm;
+  margin-top: 3cm;
+  font-family: 'Give You Glory', sans-serif;
+  text-transform: uppercase;
+  font-display: swap;
+  text-shadow: 0 0 10px tomato;
+}
+
+.jt__row {
+  display: block;
+}
+.jt__row:nth-child(1) {
+  clip-path: polygon(-10% 75%, 110% 75%, 110% 110%, -10% 110%);
+}
+.jt__row:nth-child(2) {
+  clip-path: polygon(-10% 50%, 110% 50%, 110% 75.3%, -10% 75.3%);
+}
+.jt__row:nth-child(3) {
+  clip-path: polygon(-10% 25%, 110% 25%, 110% 50.3%, -10% 50.3%);
+}
+.jt__row:nth-child(4) {
+  clip-path: polygon(-10% 0%, 110% 0%, 110% 25.3%, -10% 25.3%);
+}
+
+.jt__row.jt__row--sibling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  user-select: none;
+  width: 800px;
+}
+
+.jt__text {
+  display: block;
+  transform-origin: bottom left;
+  animation: moveIn 2s 0s cubic-bezier(.36,0,.06,1) alternate infinite ;
+}
+.jt__row:nth-child(1) .jt__text {
+  transform: translateY(-0.1em);
+}
+.jt__row:nth-child(2) .jt__text {
+  transform: translateY(-0.3em) scaleY(1.1);
+}
+.jt__row:nth-child(3) .jt__text {
+  transform: translateY(-0.5em) scaleY(1.2) ;
+}
+.jt__row:nth-child(4) .jt__text {
+  transform: translateY(-0.7em) scaleY(1.3) ;
+}
+.jt__row:nth-child(5) .jt__text {
+  transform: translateY(-0.9em) scaleY(1.4) ;
+}
+.jt__row:nth-child(6) .jt__text {
+  transform: translateY(-1.1em) scaleY(1.5) ;
+}
+
+@keyframes moveIn {
+  50%, 100% { 
+    transform: translateY(0em)
+  }
+  0%   { 
+  opacity: 0; 
+  filter: blur(10px);
+  
+  }
+  100% { 
+  opacity: 1; 
+  filter: blur(0px);
+  }
+}
+
+
+
+.debug .jt__row:nth-child(even) {
+  color: black;
+  background: white;
+}
+.debug .jt__row:nth-child(odd) {
+  color: white;
+  background: black;
+}
+
+* { box-sizing: border-box }
+
+
+.jt1 {
+    position: relative;
+    font-size: 2vmin;
+    margin-left: 11cm;
+    margin-top: 2cm;
+    font-family: 'Give You Glory', sans-serif;
+    text-transform: uppercase;
+    font-display: swap;
+    text-shadow: 0 0 10px tomato;
+  }
+
+.jt2 {
+    position: relative;
+    font-size: 2vmin;
+    margin-left: 7.5cm;
+    margin-top: 2cm;
+    font-family: 'Give You Glory', sans-serif;
+    text-transform: uppercase;
+    font-display: swap;
+    text-shadow: 0 0 10px tomato;
+  }
+.jt3 {
+    position: relative;
+    font-size: 2vmin;
+    margin-left: 15cm;
+    margin-top: -7cm;
+    font-family: 'Give You Glory', sans-serif;
+    text-transform: uppercase;
+    font-display: swap;
+    text-shadow: 0 0 10px tomato;
+  }
+
+.jt4 {
+    position: relative;
+    font-size: 2vmin;
+    margin-left: 18cm;
+    margin-top: 3cm;
+    font-family: 'Give You Glory', sans-serif;
+    text-transform: uppercase;
+    font-display: swap;
+    text-shadow: 0 0 10px tomato;
+  }
+.jt5 {
+    position: relative;
+    font-size: 2vmin;
+    margin-left:23.5cm;
+    margin-top: 0cm;
+    font-family: 'Give You Glory', sans-serif;
+    text-transform: uppercase;
+    font-display: swap;
+    text-shadow: 0 0 10px tomato;
+  }
+  
+.jt6 {
+    position: relative;
+    font-size: 2vmin;
+    margin-left:28cm;
+    margin-top: -7cm;
+    font-family: 'Give You Glory', sans-serif;
+    text-transform: uppercase;
+    font-display: swap;
+    text-shadow: 0 0 10px tomato;
+  }
+
+.jt7 {
+    position: relative;
+    font-size: 2vmin;
+    margin-left:30cm;
+    margin-top: 4cm;
+    font-family: 'Give You Glory', sans-serif;
+    text-transform: uppercase;
+    font-display: swap;
+    text-shadow: 0 0 10px tomato;
+  }
+
+.jt8 {
+    position: relative;
+    font-size: 2vmin;
+    margin-left:36cm;
+    margin-top: -3cm;
+    font-family: 'Give You Glory', sans-serif;
+    text-transform: uppercase;
+    font-display: swap;
+    text-shadow: 0 0 10px tomato;
+  }

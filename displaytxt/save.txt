@@ -1,0 +1,23 @@
+{
+ "Word": "__I_E__E",
+ "ToFind": "toilette",
+ "Index": [
+  4,
+  7,
+  4,
+  7,
+  2
+ ],
+ "Attempts": 9,
+ "Tries": [
+  "e",
+  "STOP",
+  "R",
+  "I",
+  "STOP",
+  "STOP",
+  "STOP"
+ ],
+ "LetterCheck": true,
+ "HangmanPositions": 0
+}

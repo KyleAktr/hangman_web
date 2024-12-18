@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/game_index.css">
+    <title>Game</title>
+</head>
+<body>
+    <header>
+        <h1 class="gametitre">READY TO FAIL ?</h1>
+        <nav>
+            <ul>
+                <section class="navigation">
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/game">Game</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </section>
+            </ul>
+        </nav>
+    </header>
+</head>
+    <main>
+        <div class="rules">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias nostrum doloremque reprehenderit magnam, dignissimos quas sit minus at error. Suscipit, dolor aut? Facere tempora nemo similique omnis consequuntur aliquid harum iusto culpa numquam autem, unde provident, aliquam veritatis fugiat sapiente ipsam libero commodi consectetur doloremque voluptatum, labore maiores! Exercitationem, consequuntur.</p>
+            <h3>Wich level choose ?</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias laboriosam corporis dolor reprehenderit atque ipsam modi rem cum, consectetur odio maiores excepturi fugit perspiciatis nisi impedit, nam non dolorum eos!</p>
+            <h3>Normal ? Infinite ?</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae consequuntur ipsam aut doloribus cum iure accusantium sequi quia. Accusamus maxime veritatis cumque dolorum nisi, tempore officiis nobis porro perspiciatis dicta.
+        </div>
+        <div class="level_selection">
+            <form action="/game" method="POST">
+                <div class="selection">
+            <section class="form-section">
+                <label for="level">Choose a level:</label>
+                <select name="level" id="level" required>
+                    <option disabled selected>Choose a level</option>
+                    <option value="1">So bad?</option>
+                    <option value="2">You're so boring</option>
+                    <option value="3">You're gonna fail</option>
+                    <option value="4">Custom</option>
+                </select>
+            </section>
+            <section class="form-section">
+                <label for="mode">Choose a mode:</label>
+                <select name="mode" id="mode" required>
+                    <option disabled selected>Êtes-vous joueur ?</option>
+                    <option value="1">Normal</option>
+                    <option value="2">Infinite</option>
+                </select>
+            </section>
+        </div>
+        <div class="start_btn">
+            <button role="button">Start game</button>
+        </div>
+        </form>
+    </div>
+    </main>
+</body>
+</html>

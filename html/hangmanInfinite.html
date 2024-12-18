@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <link rel="stylesheet" href="../static/styles/hangman.css" />
+  </head>
+  <body>
+    <header>
+      <h1 class="gametitre">HANGMAN INFINITE</h1>
+      <nav>
+        <ul>
+          <section class="navigation">
+            <li><a href="/index">Home</a></li>
+            <li><a href="/game">Game</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </section>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hangman-graphic">
+        <!-- <pre>{{.HangmanGraphic}}</pre> -->
+        <img
+          id="hangman-image"
+          src="../static/img/hangman/hang{{.Attempts}}.png"
+          alt="hangman image"
+        />
+      </div>
+      <div class="right-part">
+        <div class="right-part-content">
+          {{if .Message}}
+          <p style="color: rgb(255, 255, 255)">{{.Message}}</p>
+          {{end}}
+
+          <p class="word_guess">{{.Word}}</p>
+          <p>Tentatives restantes : {{.Attempts}}</p>
+          <p>Lettres essayées : {{range .Tries}}{{.}} {{end}}</p>
+          <p>SuccessCount : {{.SuccessCount}}</p>
+
+          <form action="/hangmanInfinite" method="POST">
+            <label for="letter">Enter a letter:</label>
+            <input
+              type="text"
+              id="letter"
+              name="letter"
+              maxlength="1"
+              required
+            />
+            <input type="hidden" name="word" value="{{.Word}}" />
+            <input type="hidden" name="toFind" value="{{.ToFind}}" />
+            <input type="hidden" name="attempts" value="{{.Attempts}}" />
+            <input
+              type="hidden"
+              name="hangmanPositions"
+              value="{{.HangmanPositions}}"
+            />
+            <input
+              type="hidden"
+              name="tries"
+              value="{{range .Tries}}{{.}},{{end}}"
+            />
+            <input
+              type="hidden"
+              name="SuccessCount"
+              value="{{.SuccessCount}}"
+            />
+            <input
+              type="hidden"
+              name="hangmanGraphic"
+              value="{{.HangmanGraphic}}"
+            />
+          </form>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="../script.js"></script>
+</html>
