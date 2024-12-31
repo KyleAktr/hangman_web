@@ -185,6 +185,7 @@ func hangmanInfiniteHandler(w http.ResponseWriter, r *http.Request) {
 		data.ToFind = r.FormValue("toFind")
 		fmt.Sscanf(r.FormValue("attempts"), "%d", &data.Attempts)
 		fmt.Sscanf(r.FormValue("hangmanPositions"), "%d", &data.HangmanPositions)
+		fmt.Sscanf(r.FormValue("SuccessCount"), "%d", &data.SuccessCount)
 		tries := r.FormValue("tries")
 		if tries != "" {
 			data.Tries = strings.Split(tries, ",")

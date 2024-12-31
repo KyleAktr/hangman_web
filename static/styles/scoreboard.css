@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Geist+Mono:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  font-family: "Anton", sans-serif;
+  color: aliceblue;
+  background-color: #ff503e;
+}
+
+header {
+  height: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+header h1 {
+  margin: 20px 100px;
+  font-size: 5rem;
+  letter-spacing: 7px;
+}
+
+.navigation {
+  display: flex;
+  list-style: none;
+  margin-top: 30px;
+}
+.navigation li a {
+  color: aliceblue;
+  text-decoration: none;
+  font-size: 1.5rem;
+  margin-right: 100px;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.navigation li a:hover {
+  color: #262626;
+  transition: 0.3s;
+}
+
+main {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}

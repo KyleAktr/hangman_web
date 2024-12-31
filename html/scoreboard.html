@@ -1,16 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/styles/scoreboard.css" />
     <title>Scoreboard</title>
-</head>
-<body>
-    <p>nombre de mot : {{.SuccessCount}}</p>
-
-    <!-- <form action="/hangmanInfinite" method="POST">
+  </head>
+  <body>
+    <header>
+      <h1 class="gametitre">HANGMAN</h1>
+      <nav>
+        <ul>
+          <section class="navigation">
+            <li><a href="/index">Home</a></li>
+            <li><a href="/game">Game</a></li>
+            <li><a href="/contact">Contact</a></li>
+          </section>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="text">
+        <p>le mot était : {{.ToFind}}</p>
+        <p>nombre de mot : {{.SuccessCount}}</p>
+      </div>
+      <!-- <form action="/hangmanInfinite" method="POST">
         <button type="submit">Recommencer une nouvelle partie</button>
     </form> -->
-</body>
+    </main>
+  </body>
 </html>
