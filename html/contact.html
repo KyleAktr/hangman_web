@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../static/styles/contact.css" />
     <title>Contact</title>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init("7MSn25LQnNgmsosYh");
+      })();
+    </script>
+    <script src="../email.js"></script>
   </head>
   <body>
     <header>
@@ -33,10 +43,28 @@
       </div>
       <div class="form-contact">
         <p>Furmulaire</p>
+        <form>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <input type="text" id="message" name="message" />
+          </div>
+          <button type="submit" onclick="sendMail()">Envoyer</button>
+        </form>
       </div>
       <div class="links">
         <p>footer</p>
       </div>
     </main>
   </body>
+  <script>
+    function sendMail() {
+      let parms = {
+        message: document.getElementById("message").value,
+      };
+
+      emailjs
+        .send("service_f8b91il", "template_zb29n8b", parms)
+        .then(alert("email envoyé !"));
+    }
+  </script>
 </html>
