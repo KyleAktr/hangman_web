@@ -51,18 +51,73 @@ main {
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   grid-template-areas:
-    "about form-contact"
+    "about photos"
     "links links";
 }
 
 .about {
   grid-area: about;
+  width: 80%;
+  font-weight: 100;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: 60px;
 }
 
-.form-contact {
-  grid-area: form-contact;
+.about img {
+  width: 20px;
+  color: aliceblue;
+}
+
+.about h2 {
+  font-weight: 100;
+  letter-spacing: 3px;
+  margin-top: 30px;
+}
+
+.about form {
+  display: flex;
+  margin-top: 50px;
+}
+.about form input {
+  width: 250px;
+  height: 30px;
+  border-radius: 25px;
+  border: 1px solid black;
+  margin-right: 20px;
+  padding: 0 15px;
+}
+.about form button {
+  cursor: pointer;
+  width: 75px;
+  height: 30px;
+  border-radius: 25px;
+  border: 1px solid black;
+  margin-right: 20px;
+}
+
+.photos {
+  grid-area: photos;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+}
+.photos img {
+  height: 50vh;
 }
 
 .links {
   grid-area: links;
+  display: flex;
+  align-items: end;
+}
+
+.links p {
+  font-size: 1.5rem;
+  margin-bottom: 40px;
+  margin-right: 50px;
+}
+
+a:visited {
+  color: white; /* Même couleur que l'état normal */
 }
