@@ -1,15 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Geist+Mono:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  letter-spacing: 1px;
 }
 
 body {
   height: 100vh;
-  font-family: "Anton", sans-serif;
-  color: aliceblue;
+  font-family: "Teko", serif;
+  /* font-family: "Anton", sans-serif; */
+  color: #eaeaea;
   background-color: #ff503e;
 }
 
@@ -29,9 +32,10 @@ header h1 {
   display: flex;
   list-style: none;
   margin-top: 30px;
+  font-family: anton;
 }
 .navigation li a {
-  color: aliceblue;
+  color: #eaeaea;
   text-decoration: none;
   font-size: 1.5rem;
   margin-right: 100px;
@@ -41,6 +45,11 @@ header h1 {
 .navigation li a:hover {
   color: #262626;
   transition: 0.3s;
+}
+
+p {
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 main {
@@ -66,11 +75,11 @@ main {
 
 .about img {
   width: 20px;
-  color: aliceblue;
+  color: #eaeaea;
 }
 
 .about h2 {
-  font-weight: 100;
+  font-weight: 600;
   letter-spacing: 3px;
   margin-top: 30px;
 }
@@ -119,5 +128,5 @@ main {
 }
 
 a:visited {
-  color: white; /* Même couleur que l'état normal */
+  color: #eaeaea;
 }
