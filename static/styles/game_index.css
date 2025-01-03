@@ -1,15 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Anton&family=Geist+Mono:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Teko:wght@300..700&display=swap");
 
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  letter-spacing: 1px;
 }
 
 body {
   height: 100vh;
-  font-family: "Anton", sans-serif;
-  color: aliceblue;
+  font-family: "Teko", serif;
+  color: #eaeaea;
   background-color: #ff503e;
 }
 
@@ -29,9 +31,10 @@ header h1 {
   display: flex;
   list-style: none;
   margin-top: 30px;
+  font-family: anton;
 }
 .navigation li a {
-  color: aliceblue;
+  color: #eaeaea;
   text-decoration: none;
   font-size: 1.5rem;
   margin-right: 100px;
@@ -51,11 +54,13 @@ main {
 }
 
 .rules {
-  width: 40%;
+  width: 50%;
 }
 
 .rules p {
   margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 1.2rem;
 }
 
 .rules h3 {
@@ -67,18 +72,19 @@ main {
 #mode {
   cursor: pointer;
   background-color: transparent;
-  border: 1px solid aliceblue;
+  border: 1px solid #eaeaea;
   border-radius: 20px;
-  color: aliceblue;
+  color: #eaeaea;
   font-family: "Anton", sans-serif;
   padding: 5px 10px;
   text-transform: uppercase;
   transition: 0.5s;
+  width: 220px;
 }
 #level:hover,
 #mode:hover {
   color: #ff503e;
-  background-color: aliceblue;
+  background-color: #eaeaea;
   transition: 0.5s;
 }
 
@@ -90,12 +96,21 @@ option {
 }
 
 .level_selection {
-  width: 50%;
+  width: 30%;
+  height: 70%;
+  border: 1px #eaeaea solid;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
-.selection {
+/* .selection {
   display: flex;
   justify-content: space-around;
+} */
+
+.form-section {
+  margin-bottom: 20px;
 }
 
 .start_btn {
@@ -108,14 +123,14 @@ option {
   font-family: "Anton", sans-serif;
   background: transparent;
   cursor: pointer;
-  border: 1px solid aliceblue;
-  color: aliceblue;
+  border: 1px solid #eaeaea;
+  color: #eaeaea;
   padding: 5px 25px;
   border-radius: 20px;
   transition: 0.5s;
 }
 .start_btn button:hover {
-  background: aliceblue;
+  background: #eaeaea;
   color: #ff503e;
   padding: 5px 20px;
   transition: 0.5s;

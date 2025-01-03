@@ -26,24 +26,23 @@
             <h3>Choisir son niveau</h3>
             <p>La sélection de difficulté permet d'adapter le jeu au niveau du joueur. En mode facile, les mots sont courts et simples, idéal pour les débutants. Le mode moyen propose des mots plus complexes pour un défi modéré, tandis que le mode difficile offre des mots longs et rares pour les joueurs expérimentés. Un mode personnalisé permet également d'importer ses propres mots pour une expérience sur mesure.</p>
             <h3>Normal ? Infinite ?</h3>
-            <p>normal : Le joueur doit deviner un seul mot avec un nombre limité de tentatives (par exemple, 10). La partie se termine après une victoire ou une défaite. Ce mode est idéal pour des sessions courtes</p>
-            <p>infinite : Le joueur enchaîne des mots sans limite tant qu’il reste des tentatives. Les points (succès) s’accumulent après chaque mot deviné correctement, offrant une expérience prolongée et compétitive.</p>
+            <p>Normal : Le joueur doit deviner un seul mot avec un nombre limité de tentatives (par exemple, 10). La partie se termine après une victoire ou une défaite. Ce mode est idéal pour des sessions courtes</p>
+            <p>Infinite : Le joueur enchaîne des mots sans limite tant qu’il reste des tentatives. Les points (succès) s’accumulent après chaque mot deviné correctement, offrant une expérience prolongée et compétitive.</p>
         </div>
         <div class="level_selection">
             <form action="/game" method="POST">
                 <div class="selection">
             <section class="form-section">
-                <label for="level">Choisi ton niveau : </label>
+                <!-- <label for="level">Choisi ton niveau : </label> -->
                 <select name="level" id="level" required>
                     <option disabled selected>Selectionne ton niveau</option>
-                    <option value="1">So bad?</option>
-                    <option value="2">You're so boring</option>
-                    <option value="3">You're gonna fail</option>
-                    <option value="4">Custom</option>
+                    <option value="1">Peu convaincant</option>
+                    <option value="2">Un peu fade, non ?</option>
+                    <option value="3">Tu vas échouer...</option>
                 </select>
             </section>
             <section class="form-section">
-                <label for="mode">Choisi ton mode : </label>
+                <!-- <label for="mode">Choisi ton mode : </label> -->
                 <select name="mode" id="mode" required>
                     <option disabled selected>Normal ou Infinite ?</option>
                     <option value="1">Normal</option>
