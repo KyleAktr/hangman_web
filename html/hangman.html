@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- <link rel="stylesheet" href="../static/style.css" /> -->
-    <title>Hangman</title>
+    <title>Hangman Infinity</title>
     <link rel="stylesheet" href="../static/styles/hangman.css" />
   </head>
   <body>
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
     <header>
       <h1 class="gametitre">HANGMAN</h1>
       <nav>
@@ -74,6 +77,11 @@
         </div>
       </div>
     </main>
+    <script>
+      window.addEventListener("load", function () {
+        document.body.classList.add("loaded"); // Ajoute la classe "loaded" pour cacher le loader
+      });
+    </script>
   </body>
   <script src="../script.js"></script>
 </html>

@@ -4,9 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../static/styles/victory.css" />
-    <title>Victory</title>
+    <title>Hangman Infinity</title>
   </head>
   <body>
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
     <main>
       <div class="text">
         <p>Victoire !</p>
@@ -23,5 +26,10 @@
         </a>
       </div>
     </main>
+    <script>
+      window.addEventListener("load", function () {
+        document.body.classList.add("loaded"); // Ajoute la classe "loaded" pour cacher le loader
+      });
+    </script>
   </body>
 </html>

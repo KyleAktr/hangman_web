@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../static/styles/game_index.css">
-    <title>Game</title>
+    <title>Hangman Infinity</title>
 </head>
 <body>
+    <div id="loader">
+        <div class="spinner"></div>
+      </div>
     <header>
         <h1 class="gametitre">READY TO FAIL ?</h1>
         <nav>
@@ -56,5 +59,10 @@
         </form>
     </div>
     </main>
+    <script>
+        window.addEventListener("load", function () {
+          document.body.classList.add("loaded"); // Ajoute la classe "loaded" pour cacher le loader
+        });
+      </script>
 </body>
 </html>
