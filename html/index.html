@@ -3,13 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Hangman Infinity</title>
     <link rel="stylesheet" href="../static/styles/home.css" />
   </head>
   <body>
+    <div id="loader">
+      <div class="spinner"></div>
+    </div>
     <header>
       <h2>Bienvenue sur</h2>
-      <h1>Hangman-Web</h1>
+      <h1>Hangman Infinity</h1>
     </header>
     <main>
       <button><a href="/game">Commencer</a></button>
@@ -18,5 +21,10 @@
       <img class="attaque" src="../static/img/attaque2.png" alt="" />
       <img class="victime" src="../static/img/victime.png" alt="" />
     </footer>
+    <script>
+      window.addEventListener("load", function () {
+        document.body.classList.add("loaded"); // Ajoute la classe "loaded" pour cacher le loader
+      });
+    </script>
   </body>
 </html>
