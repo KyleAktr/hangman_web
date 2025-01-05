@@ -44,14 +44,30 @@
           <p>SuccessCount : {{.SuccessCount}}</p>
 
           <form action="/hangmanInfinite" method="post">
-            <input type="hidden" name="wordToFind" value="{{.ToFind}}">
-            <input type="hidden" name="currentWord" value="{{.Word}}">
-            <input type="hidden" name="attempts" value="{{.Attempts}}">
-            <input type="hidden" name="tries" value="{{range .Tries}}{{.}},{{end}}">
-            <input type="hidden" name="successCount" value="{{.SuccessCount}}">
-            <input type="hidden" name="level" value="{{.Level}}">
-            <input type="hidden" name="lang" value="{{.Lang}}">
-            <input type="text" name="letter" maxlength="30" pattern="[A-Za-zÀ-ÿ]+" required>
+            <input type="hidden" name="wordToFind" value="{{.ToFind}}" />
+            <input type="hidden" name="currentWord" value="{{.Word}}" />
+            <input type="hidden" name="attempts" value="{{.Attempts}}" />
+            <input
+              type="hidden"
+              name="tries"
+              value="{{range .Tries}}{{.}},{{end}}"
+            />
+            <input
+              type="hidden"
+              name="successCount"
+              value="{{.SuccessCount}}"
+            />
+            <input type="hidden" name="level" value="{{.Level}}" />
+            <input type="hidden" name="lang" value="{{.Lang}}" />
+            <input
+              type="text"
+              name="letter"
+              maxlength="30"
+              pattern="[A-Za-zÀ-ÿ]+"
+              required
+              autofocus
+              autocomplete="off"
+            />
             <button type="submit">Essayer</button>
           </form>
         </div>
@@ -68,7 +84,7 @@
           alert("Veuillez entrer une lettre.");
           return false;
         }
-        
+
         // Vérifie si la chaîne contient des caractères spéciaux, en autorisant les accents
         if (!/^[a-zA-ZÀ-ÿ]+$/.test(letter)) {
           alert("Seules les lettres sont autorisées (accents inclus).");
