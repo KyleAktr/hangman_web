@@ -269,12 +269,12 @@ func hangmanInfiniteHandler(w http.ResponseWriter, r *http.Request) {
 
 	if string([]rune(currentWord)) == wordToFind {
 		successCount++
+		attempts += 3
 		fileName := fmt.Sprintf("displaytxt/words%s%s.txt", getLevelSuffix(level), getLangSuffix(langStr))
 		words := game.GetFile(fileName)
 		wordToFind = game.TakeRandomWord(words)
 		currentWord = strings.Repeat("_", len([]rune(wordToFind)))
 		tries = []string{}
-		attempts = 10
 	}
 
 	if attempts <= 0 {
@@ -395,5 +395,5 @@ func main() {
 		erreurHandler(w, r)
 	})
 
-	http.ListenAndServe(":8087", nil)
+	http.ListenAndServe(":8088", nil)
 }
