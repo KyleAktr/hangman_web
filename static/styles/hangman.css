@@ -53,6 +53,7 @@ main {
 .word_guess {
   letter-spacing: 30px;
   font-size: 10rem;
+  text-transform: uppercase;
 }
 
 .hangman-graphic {
