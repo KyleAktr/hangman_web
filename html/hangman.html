@@ -42,16 +42,18 @@
           <p>Tentatives restantes : {{.Attempts}}</p>
           <p>Lettres essayées : {{range .Tries}}{{.}} {{end}}</p>
 
-          <form action="/hangman" method="POST">
-            <label for="letter">Enter a letter:</label>
+          <form action="/hangman" method="POST" onsubmit="return validateForm()">
+            <label for="letter">Entrez une lettre ou le mot complet :</label>
             <input
               type="text"
               id="letter"
               name="letter"
-              maxlength="1"
+              maxlength="20"
               required
               autofocus
               autocomplete="off"
+              pattern="[a-zA-ZÀ-ÿ]+"
+              title="Seules les lettres sont autorisées (accents inclus)"
             />
             <input type="hidden" name="word" value="{{.Word}}" />
             <input type="hidden" name="toFind" value="{{.ToFind}}" />
@@ -81,6 +83,21 @@
       window.addEventListener("load", function () {
         document.body.classList.add("loaded"); // Ajoute la classe "loaded" pour cacher le loader
       });
+
+      function validateForm() {
+        var letter = document.getElementById("letter").value.trim();
+        if (letter === "") {
+          alert("Veuillez entrer une lettre.");
+          return false;
+        }
+        
+        // Vérifie si la chaîne contient des caractères spéciaux, en autorisant les accents
+        if (!/^[a-zA-ZÀ-ÿ]+$/.test(letter)) {
+          alert("Seules les lettres sont autorisées (accents inclus).");
+          return false;
+        }
+        return true;
+      }
     </script>
   </body>
   <script src="../script.js"></script>

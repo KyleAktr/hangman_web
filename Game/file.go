@@ -8,6 +8,7 @@ import (
 	"math/rand"
 	"strings"
 	"time"
+	"unicode"
 )
 
 // GetFile : Take the words.txt file convert it into []string
@@ -16,9 +17,20 @@ func GetFile(file string) []string {
 	if err != nil {
 		log.Fatal(err)
 	}
-	WordStr := string(WordFile)                // Transform our file into string
-	WordsSlice := strings.Split(WordStr, "\n") // strings.Split function slice a string when it found a parameter, here is "/n"
-	return WordsSlice
+	WordStr := string(WordFile)
+	// Nettoyer le contenu en supprimant les retours à la ligne et espaces superflus
+	WordStr = strings.TrimSpace(WordStr)
+	WordsSlice := strings.Split(WordStr, "\n")
+	
+	// Nettoyer chaque mot individuellement
+	var cleanWords []string
+	for _, word := range WordsSlice {
+		word = strings.TrimSpace(word)
+		if word != "" {
+			cleanWords = append(cleanWords, word)
+		}
+	}
+	return cleanWords
 }
 
 // RandomNumber : Return a random int value
@@ -77,12 +89,10 @@ func Choosefile(arg string) {
 func TestFile(file []string) bool {
 	for _, word := range file {
 		if len(word) > 0 {
-			for _, letter := range strings.ToUpper(word) {
-				if letter < 65 || letter > 90 {
+			for _, letter := range word {
+				if !unicode.IsLetter(letter) {
 					fmt.Println("\033[31m", "This file must contain only letters. Please modify the words.txt file.")
 					return false
-				} else {
-					continue
 				}
 			}
 			continue

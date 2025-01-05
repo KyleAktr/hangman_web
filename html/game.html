@@ -22,7 +22,6 @@
             </ul>
         </nav>
     </header>
-</head>
     <main>
         <div class="rules">
             <p>Les règles du Hangman sont simples : un mot est choisi au hasard, et le joueur doit le deviner lettre par lettre. À chaque erreur, une partie du pendu est dessinée. Si le joueur découvre toutes les lettres avant que le dessin soit complet, il gagne. Sinon, il perd lorsque le pendu est entièrement dessiné. Les lettres déjà essayées ne coûtent pas de tentative supplémentaire.</p>
@@ -38,7 +37,7 @@
             <section class="form-section">
                 <!-- <label for="level">Choisi ton niveau : </label> -->
                 <select name="level" id="level" required>
-                    <option disabled selected>Selectionne ton niveau</option>
+                    <option disabled selected>Sélectionne ton niveau</option>
                     <option value="1">Peu convaincant</option>
                     <option value="2">Un peu fade, non ?</option>
                     <option value="3">Tu vas échouer...</option>
@@ -50,6 +49,14 @@
                     <option disabled selected>Normal ou Infinite ?</option>
                     <option value="1">Normal</option>
                     <option value="2">Infinite</option>
+                </select>
+            </section>
+            <section class="form-section">
+                <select name="lang" id="lang" required>
+                    <option disabled selected>Choisis ta langue</option>
+                    <option value="fr">Français</option>
+                    <option value="en">English</option>
+                    <option value="es">Español</option>
                 </select>
             </section>
         </div>

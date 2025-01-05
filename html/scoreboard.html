@@ -23,13 +23,27 @@
       </nav>
     </header>
     <main>
-      <div class="text">
-        <p>le mot était : {{.ToFind}}</p>
-        <p>nombre de mot : {{.SuccessCount}}</p>
+      <div class="score-container">
+        <h2>Score Final</h2>
+        <div class="score-details">
+          <p>Dernier mot à trouver : {{.ToFind}}</p>
+          <p>Mots trouvés : {{.SuccessCount}}</p>
+          <p>Niveau : {{.Level}}</p>
+          <p>Langue : 
+            {{if eq .Lang "fr"}}
+              Français
+            {{else if eq .Lang "en"}}
+              English
+            {{else if eq .Lang "es"}}
+              Español
+            {{end}}
+          </p>
+        </div>
+        <div class="buttons">
+          <a href="/game" class="button">Nouvelle Partie</a>
+          <a href="/index" class="button">Menu Principal</a>
+        </div>
       </div>
-      <!-- <form action="/hangmanInfinite" method="POST">
-        <button type="submit">Recommencer une nouvelle partie</button>
-    </form> -->
     </main>
     <script>
       window.addEventListener("load", function () {
