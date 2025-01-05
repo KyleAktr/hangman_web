@@ -41,7 +41,7 @@
           <p class="word_guess">{{.Word}}</p>
           <p>Tentatives restantes : {{.Attempts}} / 10</p>
           <p>Lettres essayées : {{range .Tries}}{{.}} {{end}}</p>
-          <p>SuccessCount : {{.SuccessCount}}</p>
+          <p>mots reussis : {{.SuccessCount}}</p>
 
           <form action="/hangmanInfinite" method="post">
             <input type="hidden" name="wordToFind" value="{{.ToFind}}" />
@@ -84,8 +84,6 @@
           alert("Veuillez entrer une lettre.");
           return false;
         }
-
-        // Vérifie si la chaîne contient des caractères spéciaux, en autorisant les accents
         if (!/^[a-zA-ZÀ-ÿ]+$/.test(letter)) {
           alert("Seules les lettres sont autorisées (accents inclus).");
           return false;

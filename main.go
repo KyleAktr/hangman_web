@@ -14,6 +14,7 @@ import (
 	"golang.org/x/text/unicode/norm"
 )
 
+// GameData holds the state of the game
 type GameData struct {
 	Word             string
 	ToFind           string
@@ -31,6 +32,7 @@ type GameData struct {
 
 var forbiddenChars = []rune{'@', '#', '$', '%', '&', '*', '(', ')', '-', '_', '+', '=', '[', ']', '{', '}', '|', '\\', '/', '<', '>', ',', '.', '?', '!', ';', ':', '"', '\'', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0'}
 
+// Checks if the input contains any forbidden characters
 func containsForbiddenChar(input string) bool {
 	for _, c := range input {
 		for _, forbidden := range forbiddenChars {
@@ -42,10 +44,12 @@ func containsForbiddenChar(input string) bool {
 	return false
 }
 
+// HomeHandler serves the homepage
 func HomeHandler(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, "./html/index.html")
 }
 
+// GameHandler initializes the game based on user selection
 func GameHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method == http.MethodPost {
 		if err := r.ParseForm(); err != nil {
@@ -106,6 +110,7 @@ func GameHandler(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// Get language suffix for filename based on user choice
 func getLangSuffix(lang string) string {
 	switch lang {
 	case "en":
@@ -117,11 +122,13 @@ func getLangSuffix(lang string) string {
 	}
 }
 
+// Convert level string to integer
 func getLevelInt(level string) int {
 	levelInt, _ := strconv.Atoi(level)
 	return levelInt
 }
 
+// hangmanHandler initializes the base for the game mode basic
 func hangmanHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
@@ -167,7 +174,6 @@ func hangmanHandler(w http.ResponseWriter, r *http.Request) {
 			data.Message = "Mot incorrect ! Vous perdez 2 tentatives."
 		}
 	} else {
-		// C'est une lettre unique
 		if strings.Contains(strings.Join(data.Tries, ""), letter) {
 			data.Message = "La lettre a déjà été essayée, essayez une autre lettre."
 		} else {
@@ -195,10 +201,10 @@ func hangmanHandler(w http.ResponseWriter, r *http.Request) {
 		http.ServeFile(w, r, "./html/defeat.html")
 		return
 	}
-
 	renderTemplate(w, "html/hangman.html", data)
 }
 
+// hangmanInfiniteHandler initializes the base for the game mode infinite
 func hangmanInfiniteHandler(w http.ResponseWriter, r *http.Request) {
 	if r.Method != http.MethodPost {
 		http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
@@ -296,6 +302,7 @@ func hangmanInfiniteHandler(w http.ResponseWriter, r *http.Request) {
 	renderTemplate(w, "html/hangmanInfinite.html", data)
 }
 
+// generate a suffix for file names based on the game level
 func getLevelSuffix(level int) string {
 	if level == 1 {
 		return ""
@@ -353,6 +360,7 @@ func normalizeInput(input string) string {
 	return result
 }
 
+// Renders the provided template with data
 func renderTemplate(w http.ResponseWriter, templatePath string, data GameData) {
 	tmpl, err := template.ParseFiles(templatePath)
 	if err != nil {
@@ -364,6 +372,7 @@ func renderTemplate(w http.ResponseWriter, templatePath string, data GameData) {
 	}
 }
 
+// Main function that sets up routes and starts the web server
 func setupRoutes() {
 	http.HandleFunc("/index", HomeHandler)
 	http.HandleFunc("/game", GameHandler)
