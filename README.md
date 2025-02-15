@@ -1,9 +1,5 @@
 Hangman Infinity
 
-Hangman Infinity est né de la rencontre d'Antonin et Kyle en école d'informatique. 
-Leur approche du jeu a été de dynamiser au mieux ce classique emblématique avec une direction artistique à leur image.
-Nous espérons que notre communauté prend du plaisir à jouer et nous sommes à l'écoute de toute suggestion d'amélioration. 
-
 ![image](https://github.com/user-attachments/assets/81158d7f-104d-440d-9363-06a91cb6d661)
 
 Installation : 
